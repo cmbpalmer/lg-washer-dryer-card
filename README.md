@@ -12,14 +12,16 @@ LG Combo Washer/Dryer
 LG Mini-Washer
 LG Dishwasher
 LG Fridge
+LG Oven/Range
 
 Known supported/tested models:
 MiniWasher: WTP20WY
 Combo Washer/Dryer:
 Dish Washer: XD3A25BS, DFB425FP
-Fridge: GC-L257SLXL
+Fridge: GC-L257SLXL, LF20C6330S
+Oven/Range: LSIS6338F
 
-This is expected to apply pretty widely to any/all LG ThinQ devices of these types, regardless of model. The implementation from the ThinQ integration is quite standardised, so most washer/dryer or combo machines should work, and the same for Dishwashers. 
+This is expected to apply pretty widely to any/all LG ThinQ devices of these types, regardless of model. The implementation from the ThinQ integration is quite standardised, so most appliances from the above categories should work with limited modification.
 
 # Installation (manual)
 1. Where `config` is the location of your `configuration.yaml` file, create `config/www` if it does not already exist. Then place the contents from this repository's `config/www` into yours.
