@@ -23,7 +23,7 @@ Oven/Range: LSIS6338F
 
 This is expected to apply pretty widely to any/all LG ThinQ devices of these types, regardless of model. The implementation from the ThinQ integration is quite standardised, so most appliances from the above categories should work with limited modification.
 
-These cards rely on the SmartThinQ LGE Sensors integration from HACS, but have been tested to work with the official LG ThinQ integration. As the official integration is still limited in the sensors it exposes, these cards are likely to operate best with the HACS integration. Should you decide to use the official integration, you will need to make edits to the sensor references accordingly.
+These cards rely on the [SmartThinQ LGE Sensors](https://github.com/ollo69/ha-smartthinq-sensors) integration from HACS, but have been tested to work with the [Official LG ThinQ integration](https://www.home-assistant.io/integrations/lg_thinq/). As the official integration is still limited in the sensors it exposes, these cards are likely to operate best with the HACS integration. Should you decide to use the official integration, you will need to make edits to the sensor references accordingly.
 
 # Installation (manual)
 1. Where `config` is the location of your `configuration.yaml` file, create `config/www` if it does not already exist. Then place the contents from this repository's `config/www` into yours.
