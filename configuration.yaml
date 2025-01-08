@@ -71,6 +71,15 @@ sensor:
 #          {% else %}
 #            {{ state_attr("sensor.dishwasher","remain_time").split(":")[:-1] | join(':') }}
 #          {% endif %}
+
+     oven_temp_display:
+        friendly_name: "Oven Temperature Display"
+        value_template: >
+          {% if states('sensor.oven_oven_upper_current_temperature') == 'unknown' %}
+             
+          {% else %}
+            {{ states('sensor.oven_oven_upper_current_temperature') }} °F
+          {% endif %}
  
      blank:
        friendly_name: "Blank Sensor"
