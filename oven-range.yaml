@@ -1,0 +1,147 @@
+type: vertical-stack
+cards:
+  - type: picture-elements
+    elements:
+      - type: image
+        entity: binary_sensor.oven_cooktop_state
+        image: /local/lg-icons/range-cooktop-off.png
+        state_image:
+          "on": /local/lg-icons/range-cooktop-on.png
+        style:
+          top: 30%
+          left: 75%
+          width: 40%
+          image-rendering: crisp
+      - type: image
+        entity: sensor.oven_cooktop_right_rear_state
+        image: /local/lg-icons/range-element-off.png
+        state_image:
+          Cooking: /local/lg-icons/range-element-on.png
+        style:
+          top: 21%
+          left: 87%
+          width: 8%
+          image-rendering: crisp
+      - type: image
+        entity: sensor.oven_cooktop_center_state
+        image: /local/lg-icons/range-element-off.png
+        state_image:
+          Cooking: /local/lg-icons/range-element-on.png
+        style:
+          top: 21%
+          left: 75%
+          width: 8%
+          image-rendering: crisp
+      - type: image
+        entity: sensor.oven_cooktop_left_rear_state
+        image: /local/lg-icons/range-element-off.png
+        state_image:
+          Cooking: /local/lg-icons/range-element-on.png
+        style:
+          top: 21%
+          left: 63%
+          width: 8%
+          image-rendering: crisp
+      - type: image
+        entity: sensor.oven_cooktop_left_front_state
+        image: /local/lg-icons/range-element-off.png
+        state_image:
+          Cooking: /local/lg-icons/range-element-on.png
+        style:
+          top: 39%
+          left: 69%
+          width: 8%
+          image-rendering: crisp
+      - type: image
+        entity: sensor.oven_cooktop_right_front_state
+        image: /local/lg-icons/range-element-off.png
+        state_image:
+          Cooking: /local/lg-icons/range-element-on.png
+        style:
+          top: 39%
+          left: 81%
+          width: 8%
+          image-rendering: crisp
+      - type: image
+        entity: sensor.oven
+        image: /local/lg-icons/wifi.png
+        state_image:
+          "on": /local/lg-icons/wifi-on.png
+        style:
+          top: 73%
+          left: 34%
+          width: 10%
+          image-rendering: crisp
+      - type: image
+        entity: binary_sensor.oven_upper_remote_start
+        image: /local/lg-icons/range-remote-off.png
+        state_image:
+          "on": /local/lg-icons/range-remote-on.png
+        style:
+          top: 73%
+          left: 50%
+          width: 1q%
+          image-rendering: crisp
+      - type: state-label
+        entity: sensor.blank
+        prefix: 888 °8
+        style:
+          color: "#333"
+          font-family: segment7
+          font-size: 50px
+          left: 96.5%
+          top: 74%
+          transform: translate(-100%,-50%)
+      - type: state-label
+        entity: sensor.oven_temp_display
+        style:
+          color: "#8df427"
+          font-family: segment7
+          font-size: 50px
+          left: 96.5%
+          top: 74%
+          transform: translate(-100%,-50%)
+    image: /local/hass-LGStudio-range-card-bg.png
+  - type: conditional
+    conditions:
+      - entity: sensor.oven
+        state_not: "off"
+    card:
+      type: entities
+      entities:
+        - entity: sensor.oven
+          type: attribute
+          attribute: oven_upper_mode
+          name: Oven Mode
+          icon: mdi:tune-vertical-variant
+        - entity: sensor.oven
+          type: attribute
+          attribute: oven_upper_state
+          name: Oven State
+          icon: mdi:blur
+        - entity: sensor.oven
+          type: attribute
+          attribute: cooktop_left_rear_state
+          name: Cooktop State - Left Rear
+          icon: mdi:circle-box
+        - entity: sensor.oven
+          type: attribute
+          attribute: cooktop_center_state
+          name: Cooktop State - Centre
+          icon: mdi:circle-box
+        - entity: sensor.oven
+          type: attribute
+          attribute: cooktop_right_rear_state
+          name: Cooktop State - Right Rear (warmer)
+          icon: mdi:circle-box-outline
+        - entity: sensor.oven
+          type: attribute
+          attribute: cooktop_left_front_state
+          name: Cooktop State - Left Front
+          icon: mdi:circle-box
+        - entity: sensor.oven
+          type: attribute
+          attribute: cooktop_right_front_state
+          name: Cooktop State - Right Front
+          icon: mdi:circle-box
+      state_color: false
