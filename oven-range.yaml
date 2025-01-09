@@ -95,7 +95,7 @@ cards:
       - type: state-label
         entity: sensor.oven_temp_display
         style:
-          color: "#8df427"
+          color: "#FFF"
           font-family: segment7
           font-size: 50px
           left: 96.5%
@@ -119,6 +119,16 @@ cards:
           attribute: oven_upper_state
           name: Oven State
           icon: mdi:blur
+        - entity: sensor.oven
+          type: attribute
+          attribute: oven_upper_current_temp
+          name: Oven Current Temperature
+          icon: mdi:thermostat
+        - entity: sensor.oven
+          type: attribute
+          attribute: oven_upper_target_temp
+          name: Oven Target Temperature
+          icon: mdi:thermostat
         - entity: sensor.oven
           type: attribute
           attribute: cooktop_left_rear_state
